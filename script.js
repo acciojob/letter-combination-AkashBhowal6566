@@ -1,6 +1,6 @@
 function letterCombinations(input_digit) {
   //Complete the function
-	if (digits == null || digits.length === 0) return [];
+	if (digit == null || digit.length === 0) return [];
 
   const map = {
     2: 'abc',
@@ -15,12 +15,12 @@ function letterCombinations(input_digit) {
 
   const res = [];
   const go = (i, s) => {
-    if (i === digits.length) {
+    if (i === digit.length) {
       res.push(s);
       return;
     }
 
-    for (const c of map[digits[i]]) {
+    for (const c of map[digit[i]]) {
       go(i + 1, s + c);
     }
   };
